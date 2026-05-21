@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Patiente un peu… ❤️</title>
+
+  <style>
+    body {
+      background: #ffe6f2;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 120px;
+      color: #d63384;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .loader {
+      border: 10px solid #ffd6e8;
+      border-top: 10px solid #d63384;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      margin: auto;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+
+  <script>
+    window.onload = () => {
+      document.body.style.opacity = 1;
+    };
+
+    function goTo(url) {
+      document.body.style.opacity = 0;
+      setTimeout(() => {
+        window.location.href = url;
+      }, 1000);
+    }
+
+    setTimeout(() => {
+      goTo("cadeau.html");
+    }, 20000);
+  </script>
+</head>
+
+<body>
+
+  <h1>Patiente encore un petit peut… <br> Ton cadeau arrive ❤️</h1>
+
+  <div class="loader"></div>
+
+</body>
+</html>
